@@ -1,0 +1,31 @@
+#Config YML Defaults
+Game:
+  Spectate: true
+  AmountGames: 10
+  MinPlayers: 4
+  Prefix: Arena
+  MaxPlayers: 8
+  WaitTimeMin: 120
+  TeleportTime: 10
+  ChooseMapBefore: false
+#                            #
+# Example map included below #
+#                            #
+Maps:
+  Example:
+    Name: Example
+    NumTeams: 2
+    WorldFileName: example
+    Spawns:
+      '1':
+        x: 1
+        y: 1
+        z: 1
+        yaw: 1
+        pitch: 1
+      '2':
+        x: 1
+        y: 1
+        z: 1
+        yaw: 1
+        pitch: 1
