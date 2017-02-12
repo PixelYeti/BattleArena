@@ -1,5 +1,6 @@
 package com.pixelyeti.Arena;
 
+import com.pixelyeti.Arena.Executors.ExecutorManager;
 import com.pixelyeti.Arena.GameMechs.*;
 import com.pixelyeti.Arena.Listeners.*;
 import org.bukkit.Bukkit;
@@ -31,6 +32,8 @@ public class Main extends JavaPlugin {
 
         GameManager.createGames();
         saveConfig();
+
+        ExecutorManager.registerExecutors(this);
 
         PluginManager pm = Bukkit.getServer().getPluginManager();
         EventsManager.registerEvents(pm);

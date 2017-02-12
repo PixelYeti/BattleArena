@@ -1,22 +1,10 @@
-name: GoldSiege
-main: com.pixelyeti.goldsiege.Main
+name: Arena
+main: com.pixelyeti.Arena.Main
 author: PixelYeti
 version: 1.0
 description: >
-             Gold Siege Plugin
+             Arena Plugin
 
 commands:
-  SetSpawn:
-    description: Set the spawn
-  Spawn:
-      description: Teleport to the spawn
-  TPWorld:
-      description: Teleport to a different world
-  StartGame:
-        description: Start the game of the current player
-  EndGame:
-        description: End the game of the current player
-  AddMapSpawn:
-          description: Add a map spawn to the specified map
-  ListSpawns:
-          description: Add a map spawn to the specified map
+    setclass:
+        description: Sets the class

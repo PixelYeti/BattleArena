@@ -14,6 +14,8 @@ public class EventsManager {
         pm.registerEvents(new PlayerInteract(), Main.getInstance());
         pm.registerEvents(new PlayerLeave(), Main.getInstance());
         pm.registerEvents(new PlayerDeath(), Main.getInstance());
+        pm.registerEvents(new ChatEvent(), Main.getInstance());
+        pm.registerEvents(new BlockPlace(), Main.getInstance());
 
     }
 }

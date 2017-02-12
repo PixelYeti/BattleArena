@@ -7,6 +7,7 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
+import org.bukkit.potion.PotionEffect;
 
 /**
  * Created by Callum on 09/02/2017.
@@ -30,6 +31,20 @@ public class ServerUtils {
                 yaw, (float) serverSection.getDouble("Spawn.Pitch"));
 
         return l;
+    }
+
+    public enum NegativeEffects{
+        CONFUSION, HARM, HUNGER,POISON, SLOW_DIGGING, SLOW, WEAKNESS, WITHER
+    }
+
+    public static void removeAllNegativePotions(Player player){
+        for(PotionEffect effects: player.getActivePotionEffects()){
+            for(NegativeEffects bad: NegativeEffects.values()){
+                if(effects.getType().getName().equalsIgnoreCase(bad.name())){
+                    player.removePotionEffect(effects.getType());
+                }
+            }
+        }
     }
 
 }

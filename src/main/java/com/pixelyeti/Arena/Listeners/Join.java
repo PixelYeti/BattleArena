@@ -1,5 +1,6 @@
 package com.pixelyeti.Arena.Listeners;
 
+import com.pixelyeti.Arena.GameMechs.Classes.BaseClasses.BaseClass;
 import com.pixelyeti.Arena.Main;
 import com.pixelyeti.Arena.Util.ServerUtils;
 import org.bukkit.Bukkit;
@@ -31,5 +32,7 @@ public class Join implements Listener {
                 pl.hidePlayer(p);
             }
         }
+
+        new BaseClass(p.getUniqueId()).initiate();
     }
 }
