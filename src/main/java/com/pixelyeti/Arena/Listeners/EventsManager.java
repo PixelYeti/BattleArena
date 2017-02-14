@@ -16,6 +16,8 @@ public class EventsManager {
         pm.registerEvents(new PlayerDeath(), Main.getInstance());
         pm.registerEvents(new ChatEvent(), Main.getInstance());
         pm.registerEvents(new BlockPlace(), Main.getInstance());
+        pm.registerEvents(new SnowballHit(), Main.getInstance());
+        pm.registerEvents(new ExplodeEvent(), Main.getInstance());
 
     }
 }

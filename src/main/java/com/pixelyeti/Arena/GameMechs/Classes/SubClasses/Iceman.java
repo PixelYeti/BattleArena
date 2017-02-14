@@ -24,7 +24,6 @@ public class Iceman extends ManaClass {
 
     public Iceman(UUID uuid) {
         super(uuid);
-        this.classType = ClassType.ICEMAN;
     }
 
     public void giveStartingItems() {
@@ -34,9 +33,10 @@ public class Iceman extends ManaClass {
         items.get(0).addEnchantment(Enchantment.ARROW_INFINITE, 1);
         items.add(ItemStackBuilder.createLeatherArmor(Material.LEATHER_CHESTPLATE, "Frosty Armor", ChatColor.WHITE, 1,
                 255,255,255, "Right click to equip!", "This armor will", "give you resistance", "2 but at a large",
-                "mana cost!"));
+                "mana cost!", ChatColor.AQUA + "Mana Cost: 50/s"));
         items.add(ItemStackBuilder.createCustomItemStack(Material.PACKED_ICE, "Ice wall", ChatColor.DARK_AQUA, 1, true,
-                "Right click to", "activate the ice", "wall. This will", "also remove negative", "potion effects!"));
+                "Right click to", "activate the ice", "wall. This will", "also remove negative", "potion effects!",
+                ChatColor.AQUA + "Mana Cost: 500"));
         player.getInventory().clear();
         for (ItemStack i : items)
             player.getInventory().addItem(i);

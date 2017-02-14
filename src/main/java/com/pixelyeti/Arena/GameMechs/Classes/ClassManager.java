@@ -4,6 +4,7 @@ import com.pixelyeti.Arena.GameMechs.Classes.BaseClasses.BaseClass;
 import com.pixelyeti.Arena.GameMechs.Classes.BaseClasses.ClassType;
 import com.pixelyeti.Arena.GameMechs.Classes.BaseClasses.ManaClass;
 import com.pixelyeti.Arena.GameMechs.Classes.SubClasses.Iceman;
+import com.pixelyeti.Arena.GameMechs.Classes.SubClasses.Sorcerer;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -16,7 +17,7 @@ public class ClassManager {
         BaseClass b = null;
         switch (classType) {
             case MANA:
-                b = new Iceman(id);
+                b = new Sorcerer(id);
                 players.add(b);
                 break;
             case COMBO:

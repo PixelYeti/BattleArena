@@ -1,6 +1,5 @@
 package com.pixelyeti.Arena.Util;
 
-// import com.connorlinfoot.titleapi.TitleAPI;
 import com.pixelyeti.Arena.GameMechs.Game;
 import com.pixelyeti.Arena.GameMechs.Map;
 import com.pixelyeti.Arena.GameMechs.MapManager;
@@ -69,8 +68,7 @@ public class Countdown extends BukkitRunnable {
         } else if (i == 0) {
             for (UUID id : g.players) {
                 Player p = Bukkit.getPlayer(id);
-                //TitleAPI.sendTitle(p, 5, 10, 5, ChatColor.GOLD + "Go!",
-                //        ChatColor.AQUA + "Kill all of the pigmen!");
+                p.sendTitle(ChatColor.GOLD + "Go!", ChatColor.AQUA + "THe person with the most kills wins!", 5, 10, 5);
             }
             cancel();
             return;
@@ -80,11 +78,11 @@ public class Countdown extends BukkitRunnable {
             for (UUID id : g.players) {
                 Player p = Bukkit.getPlayer(id);
                 p.sendMessage(StringUtilities.prefix + ChatColor.GREEN + "Time remaining " + i);
-                /*if (i > 3) {
-                    TitleAPI.sendTitle(p, 5, 10, 5, ChatColor.GREEN + "" + i, null);
+                if (i > 3) {
+                    p.sendTitle(ChatColor.GREEN + "" + i, null, 5, 10, 5);
                 } else {
-                    TitleAPI.sendTitle(p, 5, 10, 5, ChatColor.RED + "" + i, null);
-                }*/
+                    p.sendTitle(ChatColor.RED + "" + i, null, 5, 10, 5);
+                }
             }
         }
         i--;
