@@ -3,7 +3,7 @@ Game:
   Spectate: true
   AmountGames: 10
   MinPlayers: 4
-  Prefix: Arena
+  Prefix: BattleArena
   MaxPlayers: 8
   WaitTimeMin: 120
   TeleportTime: 10

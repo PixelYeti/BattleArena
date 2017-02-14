@@ -1,5 +1,5 @@
-name: Arena
-main: com.pixelyeti.Arena.Main
+name: BattleArena
+main: com.pixelyeti.BattleArenaeArena.Main
 author: PixelYeti
 version: 1.0
 description: >
